@@ -41,6 +41,8 @@ if (argv._[0] === 'get') {
                     console.log(`${key}: ${weatherData.main[key]}`);
                 }
             }
+            else
+                throw new Error('Координаты по городу не найдены');
         } catch (error) {
             console.error('Ошибка при получении данных о погоде:', error.message);
         }
